@@ -16,7 +16,7 @@
         $crush['height'] = 155;
         $crush['age'] = 18;
         $crush['is_single'] = false;
-
+        
         // echo $crush;
         var_dump($crushes);
         echo "<br>";
