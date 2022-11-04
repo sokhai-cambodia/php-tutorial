@@ -23,7 +23,7 @@
     $salaryAfterLate = $salaryAfterIncrease - $late; // 260 => 270 - 10
     $ot = 15;
     $otTime = 4;
-    $totalOt = $ot * $otTime; // 30 => 15 * 4
+    $totalOt = $ot * $otTime; // 60 => 15 * 4
     $totalSalary = $salaryAfterLate + $totalOt;
 
     $tax = 10 / 100; // 10% => 0.1
