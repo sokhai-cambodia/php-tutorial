@@ -16,6 +16,7 @@ Repository នេះខ្ញុំបង្តើតឡើងដើម្បី
 - [8-comparison_operators.php](8-comparison_operators.php)
 - [9-conditional_statements.php](9-conditional_statements.php)
 - [10-logical_operators.php](10-logical_operators.php)
+- [11-switch.php](11-switch.php)
 
 ## Youtube Link
 
