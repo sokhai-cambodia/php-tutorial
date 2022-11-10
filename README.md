@@ -15,6 +15,7 @@ Repository នេះខ្ញុំបង្តើតឡើងដើម្បី
 - [7-arithmetic_assignment_operators.php](7-arithmetic_assignment_operators.php)
 - [8-comparison_operators.php](8-comparison_operators.php)
 - [9-conditional_statements.php](9-conditional_statements.php)
+- [10-logical_operators.php](10-logical_operators.php)
 
 ## Youtube Link
 
