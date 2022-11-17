@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1>CRUSH FORM</h1>
+
+          <div>
+            <a href="./index.php" class="btn btn-primary">Back</a>
+          </div>
+        </div>
+
+        <form method="POST" action="./save_data.php">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              aria-describedby="name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              aria-describedby="password"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="weight" class="form-label">Weight</label>
+            <input
+              type="number"
+              class="form-control"
+              name="weight"
+              id="weight"
+              aria-describedby="weight"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="height" class="form-label">Height</label>
+            <input
+              type="text"
+              class="form-control"
+              name="height"
+              id="height"
+              aria-describedby="height"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Age</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              aria-describedby="name"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="is-single"
+              name="is_single"
+            />
+            <label class="form-check-label" for="is-single">Is Single</label>
+          </div>
+          <div class="mb-3">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Favorite Color</th>
+                  <th style="width: 50px">Action</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-fav-color"></tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2" class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      id="add-fav-color-tr"
+                    >
+                      +
+                    </button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function initDeleteFavColorEvent() {
+        let deleteTr = document.querySelectorAll(".delete-fav-color-tr");
+        deleteTr.forEach((item) => {
+          item.onclick = function () {
+            item.closest("tr").remove();
+          };
+        });
+      }
+
+      function addFavColorTr() {
+        const favColorHTMLData = `
+                <td>
+                    <input type="text" class="form-control" name="favorite_colors[]" placeholder="Favorite Color">
+                </td>
+                <td class="text-end">
+                    <button type="button" class="btn btn-danger delete-fav-color-tr">X</button>
+                </td>
+            `;
+        const favColorTr = document.createElement("tr");
+        favColorTr.innerHTML = favColorHTMLData;
+
+        document.querySelector("#tbody-fav-color").appendChild(favColorTr);
+        initDeleteFavColorEvent();
+      }
+
+      document.querySelector("#add-fav-color-tr").onclick = function () {
+        addFavColorTr();
+      };
+    </script>
+  </body>
+</html>
