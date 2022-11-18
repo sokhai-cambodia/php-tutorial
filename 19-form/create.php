@@ -37,16 +37,7 @@
               aria-describedby="name"
             />
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">password</label>
-            <input
-              type="password"
-              class="form-control"
-              name="password"
-              id="password"
-              aria-describedby="password"
-            />
-          </div>
+          
           <div class="mb-3">
             <label for="weight" class="form-label">Weight</label>
             <input
